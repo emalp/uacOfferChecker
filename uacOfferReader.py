@@ -4,10 +4,26 @@ import sys
 
 offerSite = 'https://www32.uac.edu.au/offers'
 br = mechanize.Browser()
-applicationNum = ""
-pin = ""
+#applicationNum = ""
+#pin = ""
+
+def fileRead():
+	try:
+		infoFile = open('cred.txt')
+	
+		global applicationNum
+		applicationNum = str(infoFile.readline())
+		global pin
+		pin = str(infoFile.readline())
+
+		infoFile.close()
+	except:
+		print 'Cannot open file "cred.txt"'
+		sys.exit(1)
 
 def mainBrowsing():
+	fileRead()
+
 	try:
 		br.open(offerSite)
 
@@ -38,15 +54,4 @@ def mainBrowsing():
 		print 'Cannot read the website\n'
 		print 'Make sure all your credentials are put correct' 
 		sys.exit(1)
-try:
-	infoFile = open('cred.txt')
-	
-	applicationNum = str(infoFile.readline())
-	pin = str(infoFile.readline())
-
-	infoFile.close()
-except:
-	print 'Cannot open file "cred.txt"'
-	sys.exit(1)
-
 mainBrowsing()
