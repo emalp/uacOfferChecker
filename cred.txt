@@ -1,2 +1,2 @@
-#remove this line and paste your application number
-#remove this line and paste your pin
+#remove this line and add uac application number
+#remove this line and add uac pin number
