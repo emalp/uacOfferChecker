@@ -4,7 +4,7 @@ This thing automatically checks your offers from the uac website for undergradua
 Topic
 ----
 
-Tired of logging everytime into the UAC(University admissions scheme) website to check you undergraduate offers?
+Tired of logging everytime into the UAC(University admissions Centre) website to check you undergraduate offers?
 This thing does it for you automatically
 
 Usage
