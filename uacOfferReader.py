@@ -8,7 +8,7 @@ br = mechanize.Browser()
 #pin = ""
 
 def fileRead():
-<<<<<<< HEAD
+
         try:
                 infoFile = open('cred.txt')
         
@@ -51,7 +51,7 @@ def mainBrowsing():
                 print 'Cannot read the website\n'
                 print 'Make sure all your credentials are put correct' 
                 sys.exit(1)
-=======
+
 	try:
 		infoFile = open('cred.txt')
 	
@@ -92,5 +92,5 @@ def mainBrowsing():
 		print 'Cannot read the website\n'
 		print 'Make sure all your credentials are put correct' 
 		sys.exit(1)
->>>>>>> 317dfef7afb454578db94fdd7b49b289a68a28c1
+
 mainBrowsing()
