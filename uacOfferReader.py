@@ -21,22 +21,23 @@ def mainBrowsing():
 	# eveything's done, now print the output to the user in nice format
 
 		soup = BeautifulSoup(br.response().read(), 'lxml')
-	except err: 
-		print "Can't get to the website!"
-		sys.exit(1)
 
-	offerData = soup.find_all('p')
+		offerData = soup.find_all('p')
 	
-	print offerData[0]
-	print '\n' 
-	print offerData[1]
-	print '\n' 
-	print offerData[2]
-	print '\n' 
-	print offerData[3]
-	print '\n' 
-	print offerData[4]
+		print offerData[0]
+		print '\n' 
+		print offerData[1]
+		print '\n' 
+		print offerData[2]
+		print '\n' 
+		print offerData[3]
+		print '\n' 
+		print offerData[4]
 
+	except:
+		print 'Cannot read the website\n'
+		print 'Make sure all your credentials are put correct' 
+		sys.exit(1)
 try:
 	infoFile = open('cred.txt')
 	
@@ -44,7 +45,7 @@ try:
 	pin = str(infoFile.readline())
 
 	infoFile.close()
-except filerr:
+except:
 	print 'Cannot open file "cred.txt"'
 	sys.exit(1)
 
