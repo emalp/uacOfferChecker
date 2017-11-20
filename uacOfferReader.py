@@ -23,23 +23,17 @@ def fileRead():
 
 def mainBrowsing():
 	fileRead()
-
 	try:
 		br.open(offerSite)
-
 		br.select_form(nr=0)	
-
 		br.form['refNum'] = applicationNum # the uac number
 		br.form['pin'] = pin # the uac pin
-
 		br.submit()
 
 	# eveything's done, now print the output to the user in nice format
 
 		soup = BeautifulSoup(br.response().read(), 'lxml')
-
 		offerData = soup.find_all('p')
-	
 		print offerData[0]
 		print '\n' 
 		print offerData[1]
