@@ -1,2 +1,2 @@
-980199890
-3107
+#remove this line and add the uac application number
+#remove this line and add pin
